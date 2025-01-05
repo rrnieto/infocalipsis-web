@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dummy</title>
-    <link rel="stylesheet" href="styles.css">
+    <script>
+        fetch('head.html')
+            .then(response => response.text())
+            .then(data => document.head.innerHTML += data)
+            .catch(error => console.error('Error al cargar el head:', error));
+    </script>
+    <title>aDummy</title>    
 </head>
 <body>
-    <header>	
-		<img src="img/Banner_Infocalipsis_web.png" alt="Logo del podcast" style="height: 30%; width: 30%; object-fit: contain;"/>
-    </header>
+	<div id="header"></div>
+	<script>
+		fetch('header.html')
+			.then(response => response.text())
+			.then(data => document.getElementById('header').innerHTML = data)
+			.catch(error => console.error('Error al cargar el header:', error));
+	</script>
     <main>
 		<img src="img/dummy.webp" alt="Dummy"/>
     </main>
     <footer>
-		
-        <p>&copy; 2025 Infocalipsis Podcast. Todos los derechos reservados.</p>
+		<div id="footer"></div>
+		<script>
+			fetch('footer.html')
+				.then(response => response.text())
+				.then(data => document.getElementById('footer').innerHTML = data)
+				.catch(error => console.error('Error al cargar el footer:', error));
+		</script>			
     </footer>
 </body>
 </html>
