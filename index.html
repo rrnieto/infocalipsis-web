@@ -7,24 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>	
-		<img src="img/Banner_Infocalipsis_web.png" alt="Logo del podcast" style="height: 30%; width: 30%; object-fit: contain;"/>
-    </header>
+	<div id="header"></div>
+	<script>
+		fetch('header.html')
+			.then(response => response.text())
+			.then(data => document.getElementById('header').innerHTML = data)
+			.catch(error => console.error('Error al cargar el header:', error));
+	</script>
     <main>
 		<section>
 			<nav>
 				<ul>
-					<li><a href="que-es-el-podcast.html">El Infocalipsis</a></li>
-					<li><a href="quienes-somos.html">Los Infocalistos</a></li>					
-					<li><a href="episodios.html">Episodios</a></li>					
-					<li><a href="amigos.html">Amigos</a></li>
+					<li><a href="dummy.html">El Infocalipsis</a></li>
+					<li><a href="dummy.html">Los Infocalistos</a></li>					
+					<li><a href="dummy.html">Episodios</a></li>					
+					<li><a href="dummy.html">Amigos</a></li>
 				</ul>
 			</nav>
 		</section>
         <section>			
             <h1>Bienvenido al Infocalipsis</h1>
             <p>Infocalipsis es un podcast de cine y tv... y de libros, y a veces de comics... y bueno tambien algo de videojuegos.</p>
-			<p> Es un podcast hecho por y para amigos.</p>
+			<p>Es un podcast hecho por y para amigos.</p>
             <p>Hablamos de cosas guays, casi siempre sin equivocarnos.</p>
 			<p>Muchas tonterías.</p>
 			<p>A veces somos graciosos.</p>       
@@ -33,10 +37,9 @@
         <section>
             <h2>Escúchanos en:</h2>
             <div class="platform-links">
-				<a href="#" class="platform ivoox">Ivoox</a>
-                <a href="#" class="platform spotify">Spotify</a>
-                <a href="#" class="platform apple">Apple Podcasts</a>
-                <a href="#" class="platform google">Google Podcasts</a>
+				<a href="dummy.html" class="platform ivoox">Ivoox</a>
+                <a href="dummy.html" class="platform spotify">Spotify</a>
+                <a href="dummy.html" class="platform apple">Apple Podcasts</a>                
             </div>
         </section>
     </main>
