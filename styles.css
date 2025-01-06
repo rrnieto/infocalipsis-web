@@ -16,6 +16,14 @@ header {
     text-align: center;
 }
 
+header img.icon-img {
+    display: inline-block;
+}
+
+header img.banner-img {
+    display: inline-block;
+}
+
 header h1 {
     margin: 0;
     font-size: 2.5em;
@@ -143,17 +151,38 @@ a:hover {
 /* Image Grid Section */
 .image-section {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Adjust for image and text */
     gap: 20px;
     text-align: center;
 }
 
 .image-section img {
-    width: 40%; /* Smaller images by default */
+    width: 100%; /* Full width for grid cell */
     border-radius: 10px;
+    margin: auto; /* Center images horizontally and vertically */
+    border: 3px solid black; /* Add black border */
+}
+
+.image-section .image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    color: #333;
+    background-color: #FFF8E1; /* Match section background */
+    padding: 10px;
+    border-radius: 5px;
 }
 
 @media (max-width: 768px) {
+    header img.icon-img {
+        display: none; /* Hide icon images in mobile view */
+    }
+
+    header img.banner-img {
+        display: block; /* Ensure banner remains visible */
+    }
+
     header h1 {
         font-size: 2em;
     }
@@ -185,5 +214,10 @@ a:hover {
 
     .image-section img {
         width: 100%; /* Full width images */
+        margin: auto; /* Ensure centering remains consistent */
+    }
+
+    .image-section .image-text {
+        font-size: 0.9em;
     }
 }
