@@ -124,7 +124,35 @@ footer p {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Responsive Design */
+/* Default Links */
+a {
+    color: white; /* Default color for all links */
+    text-decoration: underline; /* Add underline to all links */
+}
+
+a:visited {
+    color: white; /* Keep visited links white */
+}
+
+a:hover {
+    font-weight: bold; /* Make the link bold */
+    font-size: 1.1em; /* Slightly increase the font size */
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+/* Image Grid Section */
+.image-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.image-section img {
+    width: 40%; /* Smaller images by default */
+    border-radius: 10px;
+}
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 2em;
@@ -149,5 +177,13 @@ footer p {
 
     section {
         padding: 10px;
+    }
+
+    .image-section {
+        grid-template-columns: 1fr; /* Single column in mobile */
+    }
+
+    .image-section img {
+        width: 100%; /* Full width images */
     }
 }
